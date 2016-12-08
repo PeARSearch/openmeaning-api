@@ -7,4 +7,13 @@ pip install django==1.8.1
 pip install djangorestframework
 
 django-admin.py startproject openmeaning .
+cd openmeaning/
+django-admin.py startapp api
+cd ..
+
+vim .gitignore
+
+python manage.py migrate
+python manage.py createsuperuser
+
 
