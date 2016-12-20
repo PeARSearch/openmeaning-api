@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from openmeaning.api.serializers import UserSerializer, GroupSerializer, VectorSerializer
 from openmeaning.api.models import Vector
 
@@ -23,10 +23,5 @@ class VectorViewSet(viewsets.ModelViewSet):
   """
   queryset = Vector.objects.all()
   serializer_class = VectorSerializer
+  lookup_field = 'word'
 
-#class VectorInstanceView(viewsets.ModelViewSet):
-#  """
-#  Returns a single vector.
-#  """
-#  model = Vector
-#  serializer_class = VectorSerializer

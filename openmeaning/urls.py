@@ -22,8 +22,6 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'vectors', views.VectorViewSet)
-#router.register(r'vectors/(?P<pk>[\d]+)/', views.VectorInstanceView)
-
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
